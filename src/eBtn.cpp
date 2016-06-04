@@ -27,10 +27,8 @@ void eBtn::handle(){
     } else  {                   // button released
         if(millis()-_startPress>_pressThrsld){
           _event="long";
-          _startPress = 0;
         }else{
           _event="release";  
-          _startPress = 0;
         }
         _startPress = 0;
     }
