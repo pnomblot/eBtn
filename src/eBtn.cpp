@@ -6,7 +6,7 @@ typedef void (*callBack) ();
 // Initialize the button on the specified pin
 eBtn::eBtn(int pin){  
   _pin=pin;
-  digitalWrite(_pin,HIGH);
+  digitalWrite(_pin,LOW);
   pinMode(_pin, INPUT);
   _status = digitalRead(pin);  
   _pressThrsld = 1000;  
