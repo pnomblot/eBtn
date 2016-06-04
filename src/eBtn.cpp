@@ -6,11 +6,10 @@ typedef void (*callBack) ();
 // Initialize the button on the specified pin
 eBtn::eBtn(int pin){  
   _pin=pin;
-  pinMode(_pin, OUTPUT);
   digitalWrite(_pin,HIGH);
+  pinMode(_pin, INPUT);
   _status = digitalRead(pin);  
   _pressThrsld = 1000;  
-  delay(100);
 };
 
 //check the status of the button, this function must be called inside a loop() or inside an interrupt
