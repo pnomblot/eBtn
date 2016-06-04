@@ -2,6 +2,7 @@
 #define eBtn_h
 
 typedef void (*callBack) ();
+#define PressThrsld 1000
 
 class eBtn{
 public:
@@ -10,9 +11,8 @@ public:
   void setThreshold(int t);
   void on(String eventName, callBack cb);
 private:
-  int _pin,_status,_prevStatus;
-  int _pressThrsld,_pressTime,_startPress;  
-  bool _readed;
+  int _pin,_status,_prevStatus, _pressThrsld;
+  long _startPress;  
   String _event;
   callBack _press, _release, _hold, _long;
 };
