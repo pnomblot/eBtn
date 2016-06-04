@@ -11,8 +11,10 @@
 	By Davide Andreazzini
 
   Minor fixes and  changes  by Patrick Nomblot June 2016
+ 
+  https://github.com/pnomblot/eBtn
   
-	https://github.com/david1983/eBtn
+  from : 	https://github.com/david1983/eBtn
 
 */
 #include <eBtn.h>
