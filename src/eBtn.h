@@ -13,7 +13,7 @@ public:
 private:
   int _pin,_status,_prevStatus, _pressThrsld;
   long _startPress;  
-  String _event;
+  int _event;
   callBack _press, _release, _hold, _long;
 };
 

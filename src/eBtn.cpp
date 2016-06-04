@@ -18,26 +18,26 @@ void eBtn::handle(){
 
   _prevStatus = _status;
   _status = digitalRead(_pin);
-  _event="";
+  _event=0;
 
   if(_prevStatus != _status) {
     if(_status == 0 ) {            // button pressed 
-        _event="press";
+        _event = 1;
         _startPress = millis();
     } else  {                   // button released
         if(millis()-_startPress>_pressThrsld){
-          _event="long";
+          _event = 2;
         }else{
-          _event="release";  
+          _event = 3;  
         }
         _startPress = 0;
     }
   }
     
 
-  if(_event=="press")_press();
-  if(_event=="release")_release();
-  if(_event=="long")_long();
+  if(_event == 1)_press();
+  if(_event == 2)_long();
+  if(_event == 3)_release();
 }
 
 void eBtn::on(String eventName, callBack cb){  
