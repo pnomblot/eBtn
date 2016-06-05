@@ -6,6 +6,10 @@ The library handle the following events:
 - release
 - longPress
 
+Please, see https://github.com/t3db0t/Button
+for a better solution
+Patrick
+
 **Usage**
     
     eBtn btn = eBtn(btnPin);
